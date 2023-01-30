@@ -2,6 +2,11 @@
 <html>
 
 <head>
+    <style type="text/css">
+	#gun{
+                        color:red;/*字体颜色*/          
+     }
+	</style>
     <meta charset="utf-8">
 
     <meta http-equiv="x-ua-compatible" content="IE=edge">
@@ -12,7 +17,7 @@
 </head>
 
 <body bgcolor="black">
-
+<marquee id="gun" direction="right" scrollamount=3  behavior="scroll">苹果打不开复制去浏览器就可以了</marquee>
     <div class="prism-player" id="player-con"></div>
     <script>
         var url = window.location.search;
@@ -47,9 +52,9 @@
         }, function(player) {
             console.log("The player is created");
         });
-player.on('ended', function () {
-setInterval(window.location.replace('http://dwz.diiil.cn/789'), 10000)
-});   
+//player.on('ended', function () {
+//setInterval(window.location.replace('http://dwz.diiil.cn/789'), 10000)
+//});   
     </script>
     <script>
         function jump() {
