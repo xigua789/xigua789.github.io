@@ -1,44 +1,25 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	</head>
-	<body>
-		<form id="upload" enctype="multipart/form-data" method="post">
-			<input type="file" name="file" id="pic" />
-	
-			<input type="button" value="提交" onclick="uploadPic();" />
-			<span class="showUrl"></span>
-			<img src="" class="showPic" alt="">
-		</form>
-		<script>
-			function uploadPic() {
-				var form = document.getElementById('upload'),
-					formData = new FormData(form);
-				$.ajax({
-					url: "http://8.130.18.176/api.php",
-					type: "post",
-					data: formData,
-					processData: false,
-			  contentType: false,
-			 	success: function(res) {
-						if (res) {
-							alert("上传成功！");
-						}
-			 		console.log(res);
-						$("#pic").val("");
-						$(".showUrl").html(res);
-						$(".showPic").attr("src", res);
-					},
-					error: function(err) {
-						alert("网络连接失败,稍后重试", err);
-					}
+<!DOCTYPE html><!-- This web page is copied by "https://bazhan.wang" --><html><head><meta name="google-analysis-id" content="331h393e2p3a392q"><!--!‭‪‭‫‬‏‭‫‭‭‬‬‬‎‫‭‫‎‭‫‭‬‎‬--><meta charset="utf-8"><!--!‭‪‭‫‬‏‭‫‭‭‬‬‬‎‫‭‫‎‭‫‭‬‎‬-->
 
-				})
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--!‭‪‭‫‬‏‭‫‭‭‬‬‬‎‫‭‫‎‭‫‭‬‎‬-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Σ(oﾟдﾟoﾉ)-林魂云~https://api.linhun.vip/</title>
+<style>
+.blue{
+color: gray;
+font-size: 18px;
+}
+</style>
+</head>
 
-			}
-		</script>
-	</body>
-</html>
+<body>
+
+<p style="text-align: center;">
+<span class="blue">在线上传文件</span></p>
+  <form action="http://8.130.18.176/api.php" method="post" enctype="multipart/form-data">
+<input type="file" name="file"> 
+<br>
+<input type="submit" name="submit" value="上传">
+</form>
+
+
+</body></html>
