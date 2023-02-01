@@ -1,12 +1,44 @@
+<!DOCTYPE html>
 <html>
-<body>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	</head>
+	<body>
+		<form id="upload" enctype="multipart/form-data" method="post">
+			<input type="file" name="file" id="pic" />
+	
+			<input type="button" value="提交" onclick="uploadPic();" />
+			<span class="showUrl"></span>
+			<img src="" class="showPic" alt="">
+		</form>
+		<script>
+			function uploadPic() {
+				var form = document.getElementById('upload'),
+					formData = new FormData(form);
+				$.ajax({
+					url: "api.php",
+					type: "post",
+					data: formData,
+					processData: false,
+			  contentType: false,
+			 	success: function(res) {
+						if (res) {
+							alert("上传成功！");
+						}
+			 		console.log(res);
+						$("#pic").val("");
+						$(".showUrl").html(res);
+						$(".showPic").attr("src", res);
+					},
+					error: function(err) {
+						alert("网络连接失败,稍后重试", err);
+					}
 
-<form action="api.php" method="post"
-enctype="multipart/form-data">
-<label for="file">Filename:</label>
-<input type="file" name="file" id="file" /> 
-<br />
-<input type="submit" name="submit" value="Submit" />
-</form>
-</body>
+				})
+
+			}
+		</script>
+	</body>
 </html>
