@@ -87,12 +87,6 @@
             var atob = window.atob(url); //解码
             url = atob; //重新变量
         }
-        se = setTimeout(function () {
-            var msg = "由于封群严重，都进一下俱乐部，防止迷路!";
-            if (confirm(msg) == true) {
-                window.location.href = 'https://pd.qq.com/s/3kiec8m2i';
-            }
-        }, 15000);
         var player = new Aliplayer({
             "id": "player-con",
             "source": url,
