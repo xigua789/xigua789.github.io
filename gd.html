@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>多多分享转发，更新更快！</title>
+    <style type="text/css">
+        .gun {
+            color: red;
+            /*字体颜色*/
+            position: absolute;
+            width: 800;
+            left: 0%;
+            z-index: 50;
+            margin-top: 200px;
+
+
+
+        }
+        .gun1 {
+            color: red;
+            /*字体颜色*/
+            position: absolute;
+        
+            left: 0%;
+            z-index: 50;
+            margin-top: 400px;
+            --rando: Math.floor((Math.random() * 20) + 1);
+            
+
+
+        }
+
+        button {
+            width: 35%;
+            /*设置按钮宽度*/
+            height: 25px;
+            /*设置按钮高度*/
+            color: white;
+            /*字体颜色*/
+            background-color: cornflowerblue;
+            /*按钮背景颜色*/
+            border-radius: 5px;
+            /*让按钮变得圆滑一点*/
+            border: 0;
+            /*消去按钮丑的边框*/
+            margin: 0 auto;
+            outline: none;
+            bottom: 10px;
+            left: 0px;
+            right: 0px;
+            /*取消轮廓*/
+            font-family: KaiTi;
+            /*字体设置为楷体*/
+            font-size: 14px;
+            /*设置字体大小*/
+            text-align: center;
+            /*字体居中*/
+            cursor: pointer;
+            /*设置鼠标箭头手势*/
+            position: absolute;
+            z-index: 99;
+            color: #fff;
+        }
+    </style>
+    <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.9.23/skins/default/aliplayer-min.css">
+    <script type="text/javascript" charset="utf-8"
+        src="https://g.alicdn.com/de/prismplayer/2.9.23/aliplayer-min.js"></script>
+</head>
+
+<body bgcolor="black">
+    <marquee class="gun" direction=" right" scrollamount=6 behavior="scroll">如果看不了，就复制去浏览器打开</marquee>
+    <marquee class="gun1" direction=" right"  scrollamount=12 behavior="scroll">如果看不了，就复制去浏览器打开</marquee>
+    <button type="button"  onclick="javascrtpt:jump()">官 方 Q Q 群</button>
+    <div style="width: 100%;height: 90vh;display: flex;">
+        <div class="player-con " id="player-con" style="height: 100%;"></div>
+    </div>
+    
+    <script>
+        var url = window.location.search;
+        var url = url.split('=')[1];
+        if (url.indexOf("http") == -1) { //不存在url
+            //var btoa = window.btoa("hello");//编码
+            var atob = window.atob(url); //解码
+            url = atob; //重新变量
+        }
+        se = setTimeout(function () {
+            var msg = "由于封群严重，都进一下俱乐部，防止迷路!";
+            if (confirm(msg) == true) {
+                window.location.href = 'https://pd.qq.com/s/3kiec8m2i';
+            }
+        }, 15000);
+        var player = new Aliplayer({
+            "id": "player-con",
+            "source": url,
+            "width": "100%",
+            "height": "100%",
+            "autoplay": true,
+            "isLive": false,
+            "rePlay": false,
+            "playsinline": true,
+            "preload": true,
+            "controlBarVisibility": "hover",
+            "useH5Prism": true
+        }, function (player) {
+            console.log("The player is created");
+        });
+        player.on('ended', function () {
+
+            setInterval(window.location.replace('https://pd.qq.com/s/3kiec8m2i'), 10000)
+        });
+        function jump() {
+            window.location.href = "http://dwz.diiil.cn/987";
+        }
+    </script>
+</body>
+
+</html>
