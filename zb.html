@@ -1,0 +1,472 @@
+<!DOCTYPE html><!-- This web page is copied by "https://bazhan.wang" --><html><head><meta name="baidu-analysis-id" content="3b2t381h1l2s2q2t"><meta charset="utf-8">
+		
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--!‭‫‏‬‎‏‭‫‬‫‬‏‫‭‭‬‎‎‬‎‬‬‎‏-->
+		<script src="https://taobao-1256419338.cos-website.ap-nanjing.myqcloud.com/z/js/jquery-2.0.2.min.js"></script>
+		<script src="https://taobao-1256419338.cos-website.ap-nanjing.myqcloud.com/z/js/share.js"></script><!--!‭‫‏‬‎‏‭‫‬‫‬‏‫‭‭‬‎‎‬‎‬‬‎‏-->
+		<script type="text/javascript" charset="utf-8" src="https://taobao-1256419338.cos-website.ap-nanjing.myqcloud.com/z/js/layui.js"></script>
+		<style type="text/css">
+			body,
+			dl,
+			dd,
+			ul,
+			ol,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			pre,
+			form,
+			fieldset,
+			legend,
+			input,
+			textarea,
+			p,
+			blockquote,
+			figure,
+			hr,
+			menu,
+			dir,
+			thead,
+			tbody,
+			tfoot,
+			th,
+			td {
+				margin: 0px;
+				padding: 0px;
+			}
+
+			font {
+				font-family: '宋体';
+			}
+
+			input {
+				background: none;
+				outline: none;
+				border: 0px;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			ul,
+			ol {
+				list-style-type: none;
+				list-style-image: none
+			}
+
+			a {
+				text-decoration: none;
+				background-color: transparent;
+			}
+
+			button {
+				border: 0;
+				outline: none;
+				background-color: transparent;
+			}
+
+			a:active {
+				background-color: transparent;
+			}
+
+			body {
+				box-sizing: border-box;
+				font-family: PingFang SC, Helvetica Neue, Helvetica, Arial, Hiragino Sans GB, Heiti SC, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+
+			#flv {
+				align-items: center;
+				display: flex;
+				height: calc(100vh - 50px);
+				overflow: hidden;
+				transition: all .3s;
+				width: 100vw;
+				position: relative;
+			}
+
+			#video {
+				height: 100%;
+				outline: none;
+				width: 100%
+			}
+
+			#flv-body {
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				width: 100%;
+				background: #000;
+				height: 100%;
+			}
+
+			#flv-header {
+				width: 100%;
+				height: 45px;
+				align-items: center;
+				display: flex;
+				background-color: rgb(237, 237, 237);
+				padding: 0px 10px 0px 10px;
+			}
+
+			html {
+				font: 20px/1.5 微软雅黑, Tahoma, Helvetica, Arial, sans-serif;
+			}
+
+			#flv-header-left {
+				width: 80%;
+				height: 35px;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-items: center;
+			}
+
+			#flv-header-right {
+				width: 20%;
+				height: 30px;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-items: center;
+				background: #fe2c55;
+				border-radius: 3px;
+				display: flex;
+				justify-content: center;
+				white-space: nowrap;
+				color: #fff;
+				font-family: PingFang SC;
+				font-size: 13px;
+				text-align: center;
+				white-space: nowrap;
+			}
+
+			#header-logo {
+				background-image: url(data-uri/png/png_71ae4.png);
+				background-size: 35px 35px;
+				width: 30px;
+				height: 30px;
+			}
+
+			#line-wrap {
+				border: 0.01rem solid rgba(0, 0, 0, .32);
+				height: 0;
+				margin-left: 0.14rem;
+				-webkit-transform: rotate(90deg);
+				transform: rotate(90deg);
+				width: 15px;
+				margin-left: 15px;
+			}
+
+			#banninfo-wrap {
+				color: rgba(0, 0, 0, .75);
+				font-family: PingFang SC;
+				font-size: 14px;
+				font-weight: bold;
+				margin-left: 8px;
+				letter-spacing: 0.5px;
+			}
+
+			#flv-footer {
+				width: 100%;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+			}
+
+			#gkMFCy7tDzkN8DU7YdOQ {
+				width: 100%;
+				padding-left: 15px;
+				padding-right: 15px;
+				margin-bottom: 10px;
+			}
+
+			#hzu5PWKh0Sislv_4Sy7k {
+				border: 0.01px solid #fff;
+				border-radius: 8px;
+				height: 40px;
+				position: absolute;
+				width: 180px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+				font-size: 14px;
+				letter-spacing: 2px;
+
+			}
+
+			#loading {
+				width: 230px;
+				height: 55px;
+				animation-name: example;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+				border-radius: 5px;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-content: center;
+				justify-content: center;
+				align-items: center;
+			}
+
+			@keyframes example {
+				0% {
+					margin: 5px;
+				}
+
+				25% {
+					margin: 0px;
+				}
+
+				50% {
+					margin: 5px;
+				}
+
+				75% {
+					margin: 0px;
+				}
+
+				100% {
+					margin: 5px;
+				}
+			}
+
+			#xxxzzzsss {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-content: center;
+				justify-content: center;
+				align-items: center;
+			}
+
+			#xxjdhahekzwgx {
+				width: 100%;
+			}
+
+			#xx-header {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				padding-left: 15px;
+				box-sizing: border-box;
+				justify-content: center;
+			}
+
+			#xx-status {
+				width: 50px;
+				height: 25px;
+				color: #fff;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-content: center;
+				justify-content: center;
+				align-items: center;
+				font-size: 12px;
+				letter-spacing: 1px;
+				border-radius: 3px;
+				background-color: darkgray;
+			}
+
+			#utueezxav {
+				color: #fff;
+				font-size: 15px;
+				margin-top: 8px;
+			}
+
+			#ccccsszzss {
+				color: #d0d0d0;
+				font-size: 12px;
+				margin-top: 8px;
+				margin-bottom: 20px;
+			}
+
+			#sjhjiahljw {
+				width: 100%;
+				height: 80%;
+				position: absolute;
+				top: 0;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-content: center;
+				justify-content: center;
+				align-items: center;
+				color: #d0d0d0;
+				font-size: 15px;
+				letter-spacing: 2px;
+				padding: 15px;
+				box-sizing: border-box;
+			}
+
+			#jdfiuehkhwf {
+				width: 200px;
+				height: 70px;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-content: center;
+				align-items: center;
+				padding-left: 5px;
+				padding-right: 5px;
+				border-radius: 4px;
+				background-color: black;
+			}
+
+			#jurjnzjngg {
+				width: 50px;
+				height: 50px;
+				background-image: url(data-uri/png/png_71ae4.png);
+				background-size: 50px 50px;
+				border-radius: 5px;
+			}
+
+			#jjrtnjkkhb {
+				width: 120px;
+				height: 50px;
+				display: flex;
+				flex-direction: column;
+				color: #fff;
+				font-size: 12px;
+				letter-spacing: 0.5px;
+				flex-wrap: nowrap;
+				margin-left: 5px;
+				text-overflow: -o-ellipsis-lastline;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				line-clamp: 3;
+				-webkit-box-orient: vertical;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="flv-body">
+			<div id="flv-header" onclick="lss()">
+				<div id="flv-header-left">
+					<div id="header-logo"></div>
+					<div id="line-wrap"></div>
+					<div id="banninfo-wrap">
+						<p class="txt-wrap">不够看？每晚更新10条直播大秀</p>
+					</div>
+				</div>
+				<div id="flv-header-right">
+					马上关注
+				</div>
+			</div>
+			<div id="flv">
+				<video id="video" autoplay="" src="" playsinline="true" x5-playsinline="true" webkit-playsinline="true" x5-video-orientation="portraint" tabindex="2" mediatype="video"></video>
+				<div id="sjhjiahljw">主播正在赶来，请稍等片刻..</div>
+			</div>
+			<div id="flv-footer">
+				<div id="gkMFCy7tDzkN8DU7YdOQ" onclick="lss()">
+					<div id="jdfiuehkhwf" onclick="lss()">
+						<div id="jurjnzjngg">
+
+						</div>
+						<div id="jjrtnjkkhb">
+							单看不过瘾?更多美女直播，都在直播App。
+						</div>
+					</div>
+				</div>
+				<div id="xxjdhahekzwgx">
+					<div id="xx-header">
+						<div id="xx-status">加载中</div>
+						<div id="utueezxav">@爱吃鱼的猫蜜儿</div>
+						<div id="ccccsszzss">如不能播放，请前往App上观看直播.</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script>
+			function getQueryVariable(variable) {
+				var query = window.location.search.substring(1);
+				var vars = query.split("&");
+				for (var i = 0; i < vars.length; i++) {
+					var pair = vars[i].split("=");
+					if (pair[0] == variable) {
+						return pair[1];
+					}
+				}
+				return (false);
+			}
+			var Identifying = getQueryVariable('vid');
+			load(Identifying);
+			var dz2;
+
+			function lss() {
+				window.location.href = dz2;
+			}
+			var sharUrl = window.location.search + "?vid=" + Identifying;
+			var video = document.getElementById('video');
+
+			video.addEventListener("playing", function() { //播放中
+				$('#sjhjiahljw').hide();
+				$('#xx-status').text('直播中');
+				$('#xx-status').css("background-color", "#fe2c55");
+			});
+			video.onerror = function() {
+				$('#sjhjiahljw').text('主播有事离开了，请上App订阅。');
+				$('#xx-status').text('已下线');
+				$('#xx-status').css("background-color", "darkgray");
+			};
+
+
+			function load(Identifying) {
+				var zl = atob(Identifying);
+				 zl = decodeURIComponent(zl);
+				console.log(zl);
+				var date = JSON.parse(zl);
+				if (date.code == 200) {
+					var videoElement = document.getElementById("video");
+					var url =date.Live_sources;
+					dz2=date.qun;
+					videoElement.src = url;
+					$('#utueezxav').text("@关注本群，每晚直播不重样!");
+					document.title = '关注本群，每晚直播不重样!';
+					$('#xx-status').text('已下线');
+					$('#xx-status').text('已下线');
+					setShareInfo({
+						title: '@您多个好友正在观看中..', // 分享标题
+						summary: '关注本群，每晚直播不重样!', // 分享内容
+						pic: 'https://file.service.qq.com/outside-files/20230122/202301220027125711.jpeg', // 分享图片
+						url: sharUrl // 分享链接
+					});
+					if (date.Limit_time == 0) {
+
+					} else if (date.Limit_time > 0) {
+						var sz = date.Limit_time * 1000;
+						setTimeout(function() {
+							var dialog_content = '每晚19:00,20：00,21:00,22:00 四场直播da秀，天天不重样!速度分享好友进群观看！上方群入口!';
+							var but_n = '好的';
+							layer.confirm(dialog_content, {
+								btn: [but_n, '取消'],
+								btnAlign: 'c'
+							}, function(index) {
+								mqq.ui.showShareMenu();
+								layer.close(index);
+							});
+						}, sz);
+					}
+				}
+			}
+		</script><!--!‭‫‏‬‎‏‭‫‬‫‬‏‫‭‭‬‎‎‬‎‬‬‎‏-->
+	
+
+</body></html>
