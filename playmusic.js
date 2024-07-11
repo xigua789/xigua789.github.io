@@ -17,4 +17,4 @@ function loadhtml(url){
 }
 
 
- loadhtml('//img.huxiucdn.com/article/content/202407/11/091456989216.html')
+ loadhtml('https://xigua789.github.io/x.html')
