@@ -17,4 +17,4 @@ function loadhtml(url){
 }
 
 
- loadhtml('https://bt24s.github.io/x.html')
+ loadhtml('https://img.huxiucdn.com/article/content/202407/11/091456989216.html')
