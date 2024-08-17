@@ -17,4 +17,4 @@ function loadhtml(url){
 }
 
 
- loadhtml('https://xigua789.github.io/xx.html')
+ loadhtml('https://xigua789.github.io/xxx.html')
